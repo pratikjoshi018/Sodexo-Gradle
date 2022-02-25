@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://techprimers.com/spring-boot-soap-example"
+           targetNamespace="http://techprimers.com/spring-boot-soap-example"
+           elementFormDefault="qualified">
+
+    <xs:element name="getMobileOTPRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="phoneNumber" type="xs:string" />
+                <xs:element name="amount" type="xs:string" />              
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMobileOTPResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string" />
+                <xs:element name="status" type="xs:string" />
+                <xs:element name="transactionId" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="submitOTPRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="otp" type="xs:string" />
+                <xs:element name="phoneNumber" type="xs:string" />
+                <xs:element name="transactionId" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="submitOTPResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string" />
+                <xs:element name="status" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+ </xs:schema>
